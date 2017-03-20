@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addOn>
+  <identifier>e575b6f2-4a80-11e4-9553-005056977bd0</identifier>
+  <displayType>Function</displayType>
+  <translatedDisplayType>
+    <en_US>Function</en_US>
+    <ja_JP>関数</ja_JP>
+    <ko_KR>함수</ko_KR>
+    <zh_CN>函数</zh_CN>
+  </translatedDisplayType>
+  <name>Segmentation</name>
+  <author>Micael Couceiro</author>
+  <version>1.4</version>
+  <downloadUrl>https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/submissions/29517/versions/5/download/zip?src=addons_ml_desktop_install&amp;profile_id=8694286</downloadUrl>
+  <previewImageUrl>https://www.mathworks.com/responsive_image/160/120/0/0/0/cache/add-ons/image/3eabe547c412437b75a5d52faaf96e83.png</previewImageUrl>
+  <installationFolder>Functions</installationFolder>
+</addOn>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addOn>
+  <identifier>eb448ce3-45ee-447c-a6fc-3e0aa526d594</identifier>
+  <displayType>Function</displayType>
+  <translatedDisplayType>
+    <en_US>Function</en_US>
+    <ja_JP>関数</ja_JP>
+    <ko_KR>함수</ko_KR>
+    <zh_CN>函数</zh_CN>
+  </translatedDisplayType>
+  <name>K-means segmentation</name>
+  <author>Alireza</author>
+  <version>1.0</version>
+  <downloadUrl>https://www.mathworks.com/matlabcentral/mlc-downloads/downloads/submissions/52697/versions/1/download/zip?src=addons_ml_desktop_install&amp;profile_id=8694286</downloadUrl>
+  <previewImageUrl>https://www.mathworks.com/responsive_image/160/120/0/0/0/cache/add-ons/image/e7d4478ef0114e4dff3ac00680f5b701.png</previewImageUrl>
+  <installationFolder>Functions</installationFolder>
+</addOn>
