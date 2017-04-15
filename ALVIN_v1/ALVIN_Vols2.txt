@@ -1,0 +1,5 @@
+ALVIN v1.0 Lateral Ventricle Volumes
+File produced on 02-Apr-2017 17:59:14
+Volumes in millilitres
+Name 	 Volume
+/Users/Baihong/Desktop/cmput414/ALVIN_v1/ALVIN_test_data/test_image2.img,1 	 14.3114 	 ml 	 
