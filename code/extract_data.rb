@@ -31,6 +31,6 @@ options = {}
   p dir
   target_dir=File.join(dir, 'MRI')
   puts target_dir
-  files=Dir.glob("#{dir}/**/FSL_SEG/*.gif")
+  files=Dir.glob("#{dir}/**/T88_111/*masked_gfc_tra_90.gif")
   FileUtils::mkdir_p target_dir
   create_bag(target_dir, files, false)
