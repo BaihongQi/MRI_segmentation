@@ -5,17 +5,16 @@ import os
 '''
 convert the image from gray to black and white.
 '''
-fname = os.listdir('/Users/Ray/Desktop/496/cmput414-project/code/reconstruct/JPEG-data')
-#print(fname)
+fname = os.listdir('/Users/ruisi/Desktop/496/cmput414-project/code/reconstruct/Segmentated_JPG')
 imlist=[]
 for i in fname:
-    img = cv2.imread('/Users/Ray/Desktop/496/cmput414-project/code/reconstruct/JPEG-data/'+str(i),0)
+    img = cv2.imread('/Users/ruisi/Desktop/496/cmput414-project/code/reconstruct/Segmentated_JPG/'+str(i),0)
     if img is not None:
         imlist.append(img)
     else:
         print(str(i)+" is not readable")
 print(len(imlist))
-seq = 0
+seq = 36
 for img in imlist:
     seq+=1
     h,w = img.shape
@@ -25,8 +24,7 @@ for img in imlist:
         for j in i:
             if j not in lis:
                 lis.append(j)
-#    print(len(lis))
-#    print(lis)
+
     plt.imshow(im_bw),plt.title("read?")
     plt.show()
 
@@ -34,13 +32,7 @@ for img in imlist:
 
 
     t = 0
-    '''
-    while t<5:
-        blur = cv2.GaussianBlur(im_bw,(5,5),0)
-        im_bw = blur
-        t=t+1
-    edge =cv2.Canny(im_bw, 30, 150)
-    '''
+
     cnt = cv2.findContours(im_bw, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)[1]
 
     ch = 0
@@ -59,10 +51,28 @@ for img in imlist:
         plt.show()
         print(temp2)
         print("is there anything you would like to remove? choese between 0 to "+str(len(temp)-1))
+        print('to select muti value use , to split them')
         ch = raw_input()
         if str(ch) != 'n':
-            temp.remove(temp[int(ch)])
-            temp2.remove(temp2[int(ch)])
+            chl = str(ch).split(",")
+            item = []
+            item2 = []
+            listemp=[]
+            listemp2=[]
+            for i in chl:
+                item.append(temp[int(i)])
+                item2.append(temp2[int(i)])
+            for i in temp:
+                listemp.append(i.tolist())
+            for i in item:
+                idx = listemp.index(i.tolist())
+                listemp.remove(listemp[idx])
+                temp = []
+                for i in listemp:
+                    temp.append(np.array(i))
+            for i in item2:
+                idx = temp2.index(i)
+                temp2.remove(temp2[idx])
         else:
             break
     cv2.imwrite(str(seq)+'.jpeg',step2)
